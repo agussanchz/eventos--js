@@ -44,9 +44,7 @@ function renderCelulares(){
 							<button>Comprame!</button></div>`
 
 		store.appendChild(contenedor)
-		productos.remove()
-		celulares.remove()
-		relojes.remove()
+
 	}
 }
 
@@ -54,9 +52,10 @@ function renderRelojes(){
 	const listaSegunCategoria = listaProductos.filter(x => x.categoria == "reloj")
 
 	let catalogo = document.querySelector(".store")
-	catalog.innerHTML = ""
+	catalogo.innerHTML = ""
 
 	for (const producto of listaSegunCategoria){
+
 		let contenedor = document.createElement("div")
 
 		contenedor.innerHTML = `<div class="card">
@@ -66,14 +65,11 @@ function renderRelojes(){
 							<button>Comprame!</button></div>`
 
 		store.appendChild(contenedor)
-		productos.remove()
-		celulares.remove()
-		relojes.remove()
 	}
 }
 
 function mostrar(){
-
+	store.innerHTML = ""
 	for (const producto of listaProductos){
 		let contenedor = document.createElement("div")
 
@@ -84,9 +80,7 @@ function mostrar(){
 							<button>Comprame!</button></div>`
 
 		store.appendChild(contenedor)
-		productos.remove()
-		celulares.remove()
-		relojes.remove()
+
 	}
 }
 
