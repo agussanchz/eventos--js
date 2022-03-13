@@ -16,15 +16,59 @@ const productoD = new Productos("Watch Se", 250, "reloj", "./img/watch-3.png")
 
 const listaProductos = [productoA, productoB, productoC, productoD]
 
-// let categoriaProducto = prompt(`Ingrese la categoria que quiera ver: \n - telefono \n - reloj`)
-
-//const listaSegunCategoria = listaProductos.filter(x => x.categoria == categoriaProducto)
 
 let store = document.querySelector(".store")
 
 let productos = document.querySelector(".productos")
-
 productos.addEventListener("click", mostrar)
+
+let celulares = document.querySelector(".categoria1")
+let relojes = document.querySelector(".categoria2")
+
+celulares.addEventListener("click",renderCelulares)
+relojes.addEventListener("click",renderRelojes)
+
+function renderCelulares(){
+	const listaSegunCategoria = listaProductos.filter(x => x.categoria == "telefono")
+
+	let catalogo = document.querySelector(".store")
+
+	for (const producto of listaSegunCategoria){
+		let contenedor = document.createElement("div")
+
+		contenedor.innerHTML = `<div class="card">
+							<h3>Producto: ${producto.nombre}</h3>
+							<p>Precio: $US ${producto.precio}</p>
+							<img src=${producto.imagen}>
+							<button>Comprame!</button></div>`
+
+		store.appendChild(contenedor)
+		productos.remove()
+		celulares.remove()
+		relojes.remove()
+	}
+}
+
+function renderRelojes(){
+	const listaSegunCategoria = listaProductos.filter(x => x.categoria == "reloj")
+
+	let catalogo = document.querySelector(".store")
+
+	for (const producto of listaSegunCategoria){
+		let contenedor = document.createElement("div")
+
+		contenedor.innerHTML = `<div class="card">
+							<h3>Producto: ${producto.nombre}</h3>
+							<p>Precio: $US ${producto.precio}</p>
+							<img src=${producto.imagen}>
+							<button>Comprame!</button></div>`
+
+		store.appendChild(contenedor)
+		productos.remove()
+		celulares.remove()
+		relojes.remove()
+	}
+}
 
 function mostrar(){
 
@@ -39,8 +83,12 @@ function mostrar(){
 
 		store.appendChild(contenedor)
 		productos.remove()
+		celulares.remove()
+		relojes.remove()
 	}
 }
+
+
 
 
 
