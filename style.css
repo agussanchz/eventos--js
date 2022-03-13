@@ -1,0 +1,16 @@
+.store {
+	display: flex;
+	flex-direction: row;
+}
+
+.card {
+	background: grey;
+	padding: 30px;
+}
+
+
+
+img {
+	width: 200px;
+	height: 200px;
+}
