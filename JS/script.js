@@ -22,9 +22,9 @@ const listaProductos = [productoA, productoB, productoC, productoD]
 
 let store = document.querySelector(".store")
 
-let celulares = document.querySelector(".celulares")
+let productos = document.querySelector(".productos")
 
-celulares.addEventListener("click", mostrar)
+productos.addEventListener("click", mostrar)
 
 function mostrar(){
 
@@ -37,16 +37,12 @@ function mostrar(){
 							<img src=${producto.imagen}>
 							<button>Comprame!</button></div>`
 
-	store.appendChild(contenedor)
-	celulares.remove()
+		store.appendChild(contenedor)
+		productos.remove()
+	}
 }
-}
 
 
-
-/*
-
-*/
 
 
 
